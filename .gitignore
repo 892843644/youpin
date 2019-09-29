@@ -1,0 +1,7 @@
+# Project exclude paths
+/youpin-gateway/target/
+/yp-common/target/
+/yp-item/yp-item-interface/target/
+/yp-item/yp-item-service/target/
+/yp-search/target/
+/yp-upload/target/

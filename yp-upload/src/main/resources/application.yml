@@ -1,0 +1,21 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: upload-service
+  servlet:
+    multipart:
+      # 限制文件上传大小
+      max-file-size: 10MB
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+qcloud:
+  #初始化用户身份信息 前往控制台密钥管理查看
+  secretId: "AKIDcKlIXWKgy3vc4Jj9tNblgW8UaPJxpZj8"
+  secretKey: "MUPecJmyuZzVs36vU8VeWLuCC5hPHxSS"
+  # 指定要上传到的存储桶
+  bucketName: "youpin-1259417918"
+  # 地区选择
+  regionName: "ap-beijing"

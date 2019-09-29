@@ -1,0 +1,28 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: yp-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            # 跨域配置
+            #允许的域
+            allowedOrigins:
+              - "http://manage.youpin.com"
+              - "http://www.youpin.com"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+            # 是否保留cookie
+            allowCredentials: true
+      discovery:
+        locator:
+          # 开启通过服务中心得自动根据serviceId创建路由
+          enabled: true
+          # 让serviceId小写
+          lowerCaseServiceId: true
